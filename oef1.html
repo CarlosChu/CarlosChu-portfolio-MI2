@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<body>
+
+
+    <div class="oef">
+        <script type="text/javascript">
+            "use strict";
+
+            function telOp(cijfer1, cijfer2) {
+                return cijfer1 + cijfer2;
+            }
+            document.write("som: " + telOp(5, 5) + '<br>');
+
+            function afTrek(cijfer1, cijfer2) {
+                return cijfer1 - cijfer2;
+            }
+            document.write("rest: " + afTrek(5, 5) + '<br>');
+
+            function maal(cijfer1, cijfer2) {
+                return cijfer1 * cijfer2;
+            }
+            document.write("maal: " + maal(5, 5) + '<br>');
+
+            function delen(cijfer1, cijfer2) {
+                return cijfer1 / cijfer2;
+            }
+            document.write("deling: " + delen(5, 5) + '<br>');
+
+
+            function Rekenmachine() {
+                this.cijfer1;
+                this.cijfer2;
+
+                this.telOp = function () {
+                    return this.cijfer1 + this.cijfer2;
+                };
+                this.verminder = function () {
+                    return this.cijfer1 - this.cijfer2;
+                };
+                this.vermeningvuldig = function () {
+                    return this.cijfer1 * this.cijfer2;
+                };
+                this.deel = function () {
+                    return this.cijfer1 / this.cijfer2;
+                };
+
+            }
+
+            var rekenen = new Rekenmachine();
+            rekenen.cijfer1 = 5;
+            rekenen.cijfer2 = 5;
+            var uitkomst, uitkomst1, uitkomst2, uitkomst3;
+            uitkomst = rekenen.telOp();
+            uitkomst1 = rekenen.verminder();
+            uitkomst2 = rekenen.vermeningvuldig();
+            uitkomst3 = rekenen.deel();
+
+            document.write("uitkomst : " + uitkomst + '<br>' +
+                "uitkomst1 : " + uitkomst1 + '<br>' +
+                "uitkomst2 : " + uitkomst2 + '<br>' +
+                "uitkomst3: " + uitkomst3 + '<br>');
+        </script>
+    </div>
+
+</body>
+     

@@ -1,0 +1,17 @@
+.wit {
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    float: left;
+}
+
+.black {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    float: left;
+}
+
+.bord {
+    width: 500px;
+}

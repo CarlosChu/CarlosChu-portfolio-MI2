@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="beschrijving van de webpagina">
+    <meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>Titel van de webpagina</title>
+    <link rel="stylesheet" href="dambordCSS.css">
+
+
+
+</head>
+
+<body>
+     <span class="witbal"></span>
+    
+    <div class="bord">
+       
+        <script type="text/javascript">
+            var i;
+            var j;
+
+            for (j = 0; j < 10; j++) {
+                for (i = 0; i < 10; i++) {
+                    if ((i + j) % 2 === 0) {
+
+                        document.write('<div class="wit"></div>');
+                    } else {
+                        document.write('<div class="black"></div>');
+                    }
+
+
+                }
+
+
+            }
+       
+        </script>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

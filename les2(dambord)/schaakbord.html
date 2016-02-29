@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="beschrijving van de webpagina">
+    <meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>Titel van de webpagina</title>
+    <link rel="stylesheet" href="../les2(dambord&schaakbord)/schaakbordCSS.css">
+
+
+
+
+</head>
+
+<body>
+    <div class="bord">
+
+        <script type="text/javascript">
+            var i;
+            var j;
+
+            for (j = 0; j < 8; j++) {
+                for (i = 0; i < 8; i++) {
+                    if ((i + j) % 2 === 0) {
+
+                        document.write('<div class="wit"></div>');
+
+                    } else {
+                        document.write('<div class="black"></div>');
+
+                    }
+                }
+            }
+
+            for (i = 1; i <= 8; i++) {
+                document.write('<img class="pion" src="pion.PNG" alt="pion">')
+            }
+            for (i = 1; i <= 8; i++) {
+                document.write('<img class="pionB" src="pionBlack.PNG" alt="pion">')
+            }
+            document.write('<img class="king" src="king.PNG" alt="king">')
+            document.write('<img class="queen" src="queen.PNG" alt="queen">')
+            document.write('<img class="piece" src="piece.PNG" alt="piece">')
+            document.write('<img class="piece1" src="piece.PNG" alt="piece">')
+            document.write('<img class="horse" src="horse.PNG" alt="horse">')
+            document.write('<img class="horse1" src="horse.PNG" alt="horse">')
+            document.write('<img class="tower" src="tower.PNG" alt="horse">')
+            document.write('<img class="tower1" src="tower.PNG" alt="horse">')
+            document.write('<img class="kingb" src="kingBlack.PNG" alt="king">')
+            document.write('<img class="queenb" src="queenBlack.PNG" alt="queen">')
+            document.write('<img class="pieceb" src="pieceBlack.PNG" alt="piece">')
+            document.write('<img class="pieceb1" src="pieceBlack.PNG" alt="piece">')
+            document.write('<img class="horseb" src="horseB.PNG" alt="horse">')
+            document.write('<img class="horseb1" src="horseB.PNG" alt="horse">')
+            document.write('<img class="towerb" src="towerBlack.PNG" alt="horse">')
+            document.write('<img class="towerb1" src="towerBlack.PNG" alt="horse">')
+            
+        </script>
+    </div>
+
+</body>
+
+</html>

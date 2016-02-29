@@ -1,0 +1,204 @@
+.wit {
+    width: 80px;
+    height: 80px;
+    background-color: sandybrown;
+    float: left;
+    
+}
+
+.black {
+    width: 80px;
+    height: 80px;
+    background-color: saddlebrown;
+    float: left;
+}
+
+.bord {
+    width: 700px;
+}
+
+.pion{
+    position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+    bottom: 555px;
+
+}
+.pionB{
+    position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+    bottom:225px;
+
+}
+.king{
+    position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 250px;
+    bottom:775px;
+    
+}
+.queen{
+    position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+    bottom:775px;
+    
+}
+.piece{
+   position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+    bottom:775px;
+
+}
+.piece1{
+   position: relative;
+    left: -105px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:775px;
+
+}
+
+.horse{
+    position: relative;
+    left: -185px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:775px;
+    
+}
+.horse1{
+    position: relative;
+    left: 215px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:775px;
+    
+}
+.tower{
+    position: relative;
+    left: 295px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:775px;
+    
+}
+.tower1{
+    position: relative;
+    left: -265px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:775px;
+    
+}
+.kingb{
+    position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 250px;
+    bottom:285px;
+    
+}
+.queenb{
+    position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+    bottom:285px;
+    
+}
+.pieceb{
+   position: relative;
+    left: -5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+    bottom:285px;
+
+}
+.pieceb1{
+   position: relative;
+    left: -105px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:285px;
+
+}
+
+.horseb{
+    position: relative;
+    left: -185px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:285px;
+    
+}
+.horseb1{
+    position: relative;
+    left: 215px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:285px;
+    
+}
+.towerb{
+    position: relative;
+    left: 295px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:285px;
+    
+}
+.towerb1{
+    position: relative;
+    left: -265px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: -210px;
+    bottom:285px;
+    
+}
+
+
+    

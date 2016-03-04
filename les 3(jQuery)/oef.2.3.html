@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+        <meta name="viewport" content="width=device-width, height=device-height" />
+        <title>Titel van de webpagina</title>
+         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+         <script type="text/javascript">
+    "use strict";
+    /*global $ */
+    $(document).ready(function () {
+        $("#inhoud").addClass("titel");
+        $("#inhoud").html("starten met jQuery");
+        $("#inhoud").animate({
+                fontSize: "90px"
+            },
+            2500
+
+        );
+    });
+</script>
+
+	</head>
+    <style type="text/css">
+        .titel{
+            text-align: center;
+            line-height: 200px;
+            font-size: 1px;
+            color:  #00b;
+        }
+    
+    
+    
+    
+    </style>
+
+	<body>
+        
+        
+        <div id="inhoud"></div>
+      
+        
+        
+        
+           
+        
+        
+        
+    
+
+   
+	</body>
+</html>

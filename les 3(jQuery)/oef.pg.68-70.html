@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="beschrijving van de webpagina">
+    <meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>Titel van de webpagina</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        "use strict"
+        /* global $ */
+        $(document).ready(function () {
+
+                    $("body>div>div>ul>li.actief").prev().css("color", "#aaa");
+                    $("ul ul>li.actief").prevAll().css("color", "red");
+                    $("body>div>div>ul>li.actief").children().css("color", "green");
+                    $("body>div>div>ul>li.actief").siblings().css("text-decoration", "underline");
+                    $("ul ul>li.actief").nextAll().css("font-weight", );
+                });
+    </script>
+
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>vb p68-70</h1>
+
+        </header>
+        <div>
+
+            <ul>
+                <li>Hoofdsuk 1</li>
+                <li class="actief">Hoofdstuk 2
+                    <ul>
+                        <li>Paragraaf 1</li>
+                        <li>Paragraaf 2</li>
+                        <li>Paragraaf 1</li>
+                        <li class="actief">Paragraaf 3</li>
+                        <li>Paragraaf 4</li>
+                        <li>Paragraaf 5</li>
+
+                    </ul>
+                </li>
+                <li>Hoofdstuk 3</li>
+                <li>Hoofdstuk 4</li>
+
+
+            </ul>
+
+
+
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Copyright by Carlos</p>
+    </footer>
+
+
+</body>
+
+</html>

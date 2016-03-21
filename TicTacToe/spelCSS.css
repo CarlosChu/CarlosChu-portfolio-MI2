@@ -1,0 +1,58 @@
+body {
+    margin-left: 500px;
+    margin-right: 500px;
+    font-family: arial;
+    font-size: 20px;
+}
+
+h1 {
+    color: firebrick;
+    text-align: center;
+}
+
+.navbar {
+    background-color: wheat;
+    border-style: solid;
+    border-color: black;
+    border-bottom-style:
+}
+
+.bordArea {
+    height: 800px;
+    background-color: wheat;
+    border-style: solid;
+    border-color: black;
+    border-top-style: none;
+}
+
+.vertical {
+    border-style: solid;
+    float: left;
+    height: 99.3%;
+    border-right-style: none;
+}
+
+nav ul {
+    display: block;
+    float: left;
+    padding: 20px;
+    padding-top: 150px;
+}
+
+nav li {
+    position: relative;
+    bottom: -1em;
+    list-style: none;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#levels {
+    padding-top: 50px;
+}
+table td{
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    
+}

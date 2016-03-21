@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="beschrijving van de webpagina">
+    <meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>OEF 3.1</title>
+    <script src="../js/jquery-1.12.1.js"></script>
+    <script type="text/javascript">
+        "use strict";
+        /*global $ */
+        $(document).ready(function () {
+         var plaats = $("li").last().detach();
+         var aantal = $("li").length;
+            
+            $("body").prepend("Aantal plaatsen: " + aantal);
+            $("#bxl").append("  3 graden");
+            $("#gent").append("  15 graden");
+            $("#l").append("  22 graden");
+            $("#g").append("  7 graden");
+            $("#h").append(" 9 graden");
+            
+            
+        
+
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li id="bxl">Brussel</li>
+        <li id="gent">Gent</li>
+        <li id="l">Leuven</li>
+        <li id="g">Genk</li>
+        <li id="h">Hasselt</li>
+
+
+
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

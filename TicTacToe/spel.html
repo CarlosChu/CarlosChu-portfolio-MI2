@@ -8,7 +8,38 @@
     <meta name="viewport" content="width=device-width, height=device-height" />
     <link rel="icon" href="../0410.TicTacToeLogo_1E0ADB7E.png">
     <link rel="stylesheet" href="spelCSS.css">
-    <title>TicTacToe</title>
+    <script src="../js/jquery-1.12.1.js"></script>
+    <script type="text/javascript">
+        var medium = <input id="medium" type="radio" name="level" value="medium">;
+        var check = <input id="medium" type="radio" name="level" value="medium" checked>;
+        
+    "use strict";
+    /* global $ */
+        
+      
+    $(document).ready(function () {
+     
+        $("#bord").hide();
+        $("#again").attr("disabled", "disabled");
+        
+        $("#new").click(function () {
+            $("#bord").show("fast");
+         });
+        $("#again").click(function () {
+            $("#bord").hide();  
+            $("#bord").show("fast");
+         });
+
+    });
+  
+       
+              </script>
+    
+    
+    
+    
+    
+        <title>TicTacToe</title>
 
 </head>
 
@@ -19,19 +50,19 @@
             <nav>
                 <ul>
                     <li>
-                        <button>NEW GAME</button>
+                        <button id="new">NEW GAME</button>
                     </li>
 
                     <li>
-                        <button>PLAY AGAIN</button>
+                        <button id="again">PLAY AGAIN</button>
                     </li>
                     <form id="levels">
                         <h4>DIFFICULTY</h4> EASY
-                        <input type="radio" name="level" value="easy" checked>
+                        <input id="easy" type="radio" name="level" value="easy" checked>
                         <br> MEDIUM
-                        <input type="radio" name="level" value="medium">
+                        <input id="medium" type="radio" name="level" value="medium">
                         <br> HARD
-                        <input type="radio" name="level" value="hard">
+                        <input id="hard" type="radio" name="level" value="hard">
                         <br>
 
 
@@ -46,8 +77,29 @@
 
     <div class="bordArea">
         <div class="vertical"></div>
-        <table><tbody><td></td></tbody></table>
-    </div>
+    <table id='bord'>
+ <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+      
+</table>
+  </div>
+    
+        
+
+    
 
 
 

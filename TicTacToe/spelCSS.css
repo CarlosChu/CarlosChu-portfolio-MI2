@@ -3,6 +3,22 @@ body {
     margin-right: 500px;
     font-family: arial;
     font-size: 20px;
+    background-color: firebrick;
+}
+p {
+    text-align: center;
+  
+}
+#score{
+    width: 200px;
+    height: 200px;
+    background-color: wheat;
+    border-style: solid;
+    border-color: black;
+    margin-left: 50%;
+    bottom: 50%;
+    position: absolute;
+
 }
 
 h1 {
@@ -14,7 +30,8 @@ h1 {
     background-color: wheat;
     border-style: solid;
     border-color: black;
-    border-bottom-style:
+    height: 60px;
+    
 }
 
 .bordArea {
@@ -23,6 +40,13 @@ h1 {
     border-style: solid;
     border-color: black;
     border-top-style: none;
+}
+#new{
+    width: 85px;
+   
+}
+#again{
+    width : 85px;
 }
 
 .vertical {
@@ -52,20 +76,59 @@ nav li {
     
 }
 
-#bord {
+table1 {
     position: relative;
     top: 150px;
     left: 200px;
 }
-
-#bord tr td {
+table1 tr td {
     width: 100px;
     height: 100px;
     border: 3px solid black;
-  
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
 }
 
-#bord tr td:hover {
+table1 tr td:hover {
     background-color: aqua;
     cursor: pointer;
 }
+table2 {
+    position: relative;
+    top: 100px;
+    left: 150px;
+}
+table2 tr td {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 30px;
+  
+}
+
+table2 tr td:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+table3 {
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+table3 tr td {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 30px;
+  
+}
+
+table3 tr td:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+

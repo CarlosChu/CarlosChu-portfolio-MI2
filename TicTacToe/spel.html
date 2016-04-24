@@ -10,43 +10,135 @@
     <link rel="stylesheet" href="spelCSS.css">
     <script src="../js/jquery-1.12.1.js"></script>
     <script type="text/javascript">
-        var medium = <input id="medium" type="radio" name="level" value="medium">;
-        var check = <input id="medium" type="radio" name="level" value="medium" checked>;
-        
-    "use strict";
-    /* global $ */
-        
-      
-    $(document).ready(function () {
-     
-        $("#bord").hide();
-        $("#again").attr("disabled", "disabled");
-        
-        $("#new").click(function () {
-            $("#bord").show("fast");
-         });
-        $("#again").click(function () {
-            $("#bord").hide();  
-            $("#bord").show("fast");
-         });
+        "use strict";
+        /* global $ */
 
-    });
-  
-       
-              </script>
-    
-    
-    
-    
-    
-        <title>TicTacToe</title>
+
+        $(document).ready(function () {
+                    var x = "X";
+                    var o = "O";
+                    var move = 0;
+
+                    $("#again").attr("disabled", "disabled");
+
+                    $("#score").hide();
+
+                    $("#new").click(function StartGame() { // tabelen maken
+
+                        $("#score").fadeIn(100);
+
+                        if ($("#easy").prop("checked") && $("#medium").prop("checked", false)) {
+                            $("#bord1").append("<table1></table1>");
+                            var table1 = $("#bord1").children();
+                            table1.append("<tr><td id='t1td1'></td><td id='t1td2'></td><td id='t1td3'></td></tr>");
+                            table1.append("<tr><td id='t1td4'></td><td id='t1td5'></td><td id='t1td6'></td></tr>");
+                            table1.append("<tr><td id='t1td7'></td><td id='t1td8'></td><td id='t1td9'></td></tr>");
+                            $("#bord1").fadeIn("slow");
+                            $("#bord2").empty();
+                            $("#bord3").empty();
+
+                        } else { // BEGIN VAN DE GROTE ELSE
+
+
+                            if ($("#easy").prop("checked", false) && $("#medium").prop("checked")) {
+                                $("#bord2").append("<table2></table2>");
+                                var table2 = $("#bord2").children();
+                                table2.append("<tr><td id='t2td1'></td><td id='t2td2'></td><td id='t2td3'></td><td id='t2td4'></td></tr>");
+                                table2.append("<tr><td id='t2td5'></td><td id='t2td6'></td><td id='t2td7'></td><td id='t2td8'></td></tr>");
+                                table2.append("<tr><td id='t2td9'></td><td id='t2td10'></td><td id='t2td11'></td><td id='t2td12'></td></tr>");
+                                table2.append("<tr><td id='t2td13'></td><td id='t2td14'></td><td id='t2td15'></td><td id='t2td16'></td></tr>");
+                                $("#bord2").fadeIn("slow");
+                                $("#bord1").empty();
+                                $("#bord3").empty();
+
+
+                            } else {
+                                $("#new").prop("disabled", false);
+                                if ($("#hard").prop("checked") && $("#easy").prop("checked", false) && $("#medium").prop("checked", false)) {
+                                    $("#bord3").append("<table3></table3>");
+                                    var table3 = $("#bord3").children();
+                                    table3.append("<tr><td id='t3td1'></td><td id='t3td2'></td><td id='t3td3'></td><td id='t3td4'></td><td id='t3td5'></td></tr>");
+                                    table3.append("<tr><td id='t3td6'></td><td id='t3td7'></td><td id='t3td8'></td><td id='t3td9'></td><td id='t3td10'></td></tr>");
+                                    table3.append("<tr><td id='t3td11'></td><td id='t3td12'></td><td id='t3td13'></td><td id='t3td14'></td><td id='t3td15'></td></tr>");
+                                    table3.append("<tr><td id='t3td16'></td><td id='t3td17'></td><td id='t3td18'></td><td id='t3td19'></td><td id='t3td20'></td></tr>");
+                                    table3.append("<tr><td id='t3td21'></td><td id='t3td22'></td><td id='t3td23'></td><td id='t3td24'></td><td id='t3td25'></td></tr>");
+                                    $("#bord3").fadeIn("slow");
+                                    $("#bord2").empty();
+                                    $("#bord1").empty();
+
+
+                                }
+                            }
+
+                        } //EINDE GROTE ELSE
+
+                        $("td").one("click", function () { //X of O op de tabelen
+                            if (move == 0) {
+                                $(this).text(x);
+                                Cpu();
+                                move == 1;
+
+
+                            }
+                        });
+
+                        function Cpu() {
+                            if ($("#t1td2").text() === x && $("#t1td3").text() === x && $("#t1td1").text() === "" ) {
+                                $("#t1td1").text(o);
+
+                            } else {
+                                if ($("#t1td1").text() === x && $("#t1td2").text() === x && $("#t1td3").text() === "" ) {
+                                    $("#t1td3").text(o);
+                                } else {
+                                    if ($("#t1td4").text() === x && $("#t1td5").text() === x && $("#t1td6").text() === "" ) {
+                                        $("#t1td6").text(o);
+                                    } else {
+                                        if ($("#t1td5").text() === x && $("#t1td6").text() === x && $("#t1td4").text() === "" ) {
+                                            $("#t1td4").text(o);
+                                        } else {
+                                            if ($("#t1td7").text() === x && $("#t1td8").text() === x && $("#t1td9").text() === "" ) {
+                                                $("#t1td9").text(o);
+                                            } else {
+                                                if ($("#t1td8").text() === x && $("#t1td9").text() === x && $("#t1td7").text() === "" ) {
+                                                    $("#t1td7").text(o);
+                                                }
+                                            }
+                                        }
+                                    }
+
+
+                                }
+                            }
+                        }
+                    }) //StartGame functie
+
+                                    
+
+
+
+
+
+
+
+
+                    });
+    </script>
+
+
+
+
+
+    <title>TicTacToe</title>
 
 </head>
 
 <body>
+    <div id="score">
+        <p>SCORE</p>
+    </div>
     <header>
         <div class="navbar">
-            <h1>WELCOME TO TICTACTOE</h1>
+
             <nav>
                 <ul>
                     <li>
@@ -77,29 +169,12 @@
 
     <div class="bordArea">
         <div class="vertical"></div>
-    <table id='bord'>
- <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-</tr>
-      
-</table>
-  </div>
-    
-        
+        <div id="bord1"></div>
+        <div id="bord2"></div>
+        <div id="bord3"></div>
 
-    
+
+    </div>
 
 
 

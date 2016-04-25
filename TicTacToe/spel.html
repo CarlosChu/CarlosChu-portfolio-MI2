@@ -11,17 +11,29 @@
     <script src="../js/jquery-1.12.1.js"></script>
     <script type="text/javascript">
         "use strict";
-        /* global $ */
+        /*global $ */
 
 
         $(document).ready(function () {
-                    var x = "X";
-                    var o = "O";
-                    var move = 0;
 
+                    var x = "X",
+                        o = "O",
+                        move = 0,
+                        random = Math.floor((Math.random() * 10) + 1);
+
+
+
+
+                    // $(".container").hide();
                     $("#again").attr("disabled", "disabled");
 
                     $("#score").hide();
+                    // $("#buttonStart").click(function(){
+                    $(".container").show();
+                    $("#buttonStart").hide();
+                    $("img").hide();
+
+                    //  })
 
                     $("#new").click(function StartGame() { // tabelen maken
 
@@ -73,46 +85,90 @@
                         } //EINDE GROTE ELSE
 
                         $("td").one("click", function () { //X of O op de tabelen
-                            if (move == 0) {
+                            if (move === 0) {
                                 $(this).text(x);
+                                move === 1;
                                 Cpu();
-                                move == 1;
-
+                                
 
                             }
+
                         });
 
-                        function Cpu() {
-                            if ($("#t1td2").text() === x && $("#t1td3").text() === x && $("#t1td1").text() === "" ) {
-                                $("#t1td1").text(o);
 
+                        function Cpu() {
+                            if ($("#t1td2").text() === x && $("#t1td3").text() === x && $("#t1td1").text() === "" || $("#t1td4").text() === x && $("#t1td7").text() === x && $("#t1td1").text() === "" || $("#t1td9").text() === x && $("#t1td5").text() === x && $("#t1td1").text() === "") {
+                                $("#t1td1").text(o);
+                                move === 0;
+
+                            } else if ($("#t1td1").text() === x && $("#t1td2").text() === x && $("#t1td3").text() === "" || $("#t1td9").text() === x && $("#t1td6").text() === x && $("#t1td3").text() === "" || $("#t1td5").text() === x && $("#t1td7").text() === x && $("#t1td3").text() === "") {
+                                $("#t1td3").text(o);
+                                move === 0;
+
+                            } else if ($("#t1td4").text() === x && $("#t1td5").text() === x && $("#t1td6").text() === "" || $("#t1td3").text() === x && $("#t1td9").text() === x && $("#t1td6").text() === "") {
+                                $("#t1td6").text(o);
+                                move === 0;
+                            } else if ($("#t1td5").text() === x && $("#t1td6").text() === x && $("#t1td4").text() === "" || $("#t1td1").text() === x && $("#t1td7").text() === x && $("#t1td4").text() === "") {
+                                $("#t1td4").text(o);
+                                move === 0;
+                            } else if ($("#t1td7").text() === x && $("#t1td8").text() === x && $("#t1td9").text() === "" || $("#t1td1").text() === x && $("#t1td5").text() === x && $("#t1td9").text() === "" || $("#t1td3").text() === x && $("#t1td6").text() === x && $("#t1td9").text() === "") {
+                                $("#t1td9").text(o);
+                                move === 0;
+                            } else if ($("#t1td8").text() === x && $("#t1td9").text() === x && $("#t1td7").text() === "" || $("#t1td1").text() === x && $("#t1td4").text() === x && $("#t1td7").text() === "" || $("#t1td3").text() === x && $("#t1td5").text() === x && $("#t1td7").text() === "") {
+                                $("#t1td7").text(o);
+                                move === 0;
+                            } else if ($("#t1td2").text() === x && $("#t1td5").text() === x && $("#t1td8").text() === "" || $("#t1td7").text() === x && $("#t1td9").text() === x && $("#t1td8").text() === "") {
+                                $("#t1td8").text(o);
+                                move === 0;
+                            } else if ($("#t1td8").text() === x && $("#t1td5").text() === x && $("#t1td2").text() === "" || $("#t1td1").text() === x && $("#t1td3").text() === x && $("#t1td2").text() === "") {
+                                $("#t1td2").text(o);
+                                move === 0;
+                            } else if ($("#t1td4").text() === x && $("#t1td6").text() === x && $("#t1td5").text() === "" || $("#t1td2").text() === x && $("#t1td8").text() === x && $("#t1td5").text() === "") {
+                                $("#t1td5").text(o);
+                                move === 0;
                             } else {
-                                if ($("#t1td1").text() === x && $("#t1td2").text() === x && $("#t1td3").text() === "" ) {
-                                    $("#t1td3").text(o);
+                                if ($("#t1td5").text() === "") {
+                                    $("#t1td5").text() === o;
+                                    move === 0;
                                 } else {
-                                    if ($("#t1td4").text() === x && $("#t1td5").text() === x && $("#t1td6").text() === "" ) {
-                                        $("#t1td6").text(o);
+                                    if ($("#t1td1").text() === "") {
+                                        $('#t1td1').text(o);
+                                        move === 0;
                                     } else {
-                                        if ($("#t1td5").text() === x && $("#t1td6").text() === x && $("#t1td4").text() === "" ) {
-                                            $("#t1td4").text(o);
+                                        if ($("#t1td9").text() === "") {
+                                            $('#t1td9').text(o);
+                                            move === 0;
                                         } else {
-                                            if ($("#t1td7").text() === x && $("#t1td8").text() === x && $("#t1td9").text() === "" ) {
-                                                $("#t1td9").text(o);
+                                            if ($("#t1td8").text() === "") {
+                                                $('#t1td8').text(o);
+                                                move === 0;
                                             } else {
-                                                if ($("#t1td8").text() === x && $("#t1td9").text() === x && $("#t1td7").text() === "" ) {
-                                                    $("#t1td7").text(o);
+                                                if ($("#t1td4").text() === "") {
+                                                    $('#t1td4').text(o);
+                                                    move === 0;
                                                 }
                                             }
                                         }
                                     }
 
-
                                 }
                             }
-                        }
-                    }) //StartGame functie
+                        };// Cpu player Functie****
 
-                                    
+                        
+
+
+
+
+
+
+
+
+                                       
+
+
+                            }); //StartGame functie***
+
 
 
 
@@ -133,47 +189,53 @@
 </head>
 
 <body>
-    <div id="score">
-        <p>SCORE</p>
+    <img src="../TicTacToeTitel.gif" alt="titel">
+    <div class="welkom">
+        <button id="buttonStart">START</button>
     </div>
-    <header>
-        <div class="navbar">
-
-            <nav>
-                <ul>
-                    <li>
-                        <button id="new">NEW GAME</button>
-                    </li>
-
-                    <li>
-                        <button id="again">PLAY AGAIN</button>
-                    </li>
-                    <form id="levels">
-                        <h4>DIFFICULTY</h4> EASY
-                        <input id="easy" type="radio" name="level" value="easy" checked>
-                        <br> MEDIUM
-                        <input id="medium" type="radio" name="level" value="medium">
-                        <br> HARD
-                        <input id="hard" type="radio" name="level" value="hard">
-                        <br>
-
-
-
-                    </form>
-
-                </ul>
-            </nav>
+    <div class="container">
+        <div id="score">
+            <p>SCORE</p>
         </div>
+        <header>
+            <div class="navbar">
 
-    </header>
+                <nav>
+                    <ul>
+                        <li>
+                            <button id="new">NEW GAME</button>
+                        </li>
 
-    <div class="bordArea">
-        <div class="vertical"></div>
-        <div id="bord1"></div>
-        <div id="bord2"></div>
-        <div id="bord3"></div>
+                        <li>
+                            <button id="again">PLAY AGAIN</button>
+                        </li>
+                        <form id="levels">
+                            <h4>DIFFICULTY</h4> EASY
+                            <input id="easy" type="radio" name="level" value="easy" checked>
+                            <br> MEDIUM
+                            <input id="medium" type="radio" name="level" value="medium">
+                            <br> HARD
+                            <input id="hard" type="radio" name="level" value="hard">
+                            <br>
 
 
+
+                        </form>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <div class="bordArea">
+            <div class="vertical"></div>
+            <div id="bord1"></div>
+            <div id="bord2"></div>
+            <div id="bord3"></div>
+
+
+        </div>
     </div>
 
 

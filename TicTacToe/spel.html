@@ -16,146 +16,250 @@
 
         $(document).ready(function () {
 
-                    var x = "X",
-                        o = "O",
-                        move = 0,
-                        random = Math.floor((Math.random() * 10) + 1);
+            var x = "X",
+                o = "O",
+                move = 0,
+                score = 0,
+                random = Math.floor((Math.random() * 10));
 
 
 
 
-                    // $(".container").hide();
-                    $("#again").attr("disabled", "disabled");
 
-                    $("#score").hide();
-                    // $("#buttonStart").click(function(){
-                    $(".container").show();
-                    $("#buttonStart").hide();
-                    $("img").hide();
+            // $(".container").hide();
+            $("#again").attr("disabled", "disabled");
 
-                    //  })
+            $("#score").hide();
+            // $("#buttonStart").click(function(){
+            $(".container").show();
+            $("#buttonStart").hide();
+            $("img").hide();
 
-                    $("#new").click(function StartGame() { // tabelen maken
+            //  })
 
-                        $("#score").fadeIn(100);
+            $("#new").click(function StartGame() { // tabelen maken
 
-                        if ($("#easy").prop("checked") && $("#medium").prop("checked", false)) {
-                            $("#bord1").append("<table1></table1>");
-                            var table1 = $("#bord1").children();
-                            table1.append("<tr><td id='t1td1'></td><td id='t1td2'></td><td id='t1td3'></td></tr>");
-                            table1.append("<tr><td id='t1td4'></td><td id='t1td5'></td><td id='t1td6'></td></tr>");
-                            table1.append("<tr><td id='t1td7'></td><td id='t1td8'></td><td id='t1td9'></td></tr>");
-                            $("#bord1").fadeIn("slow");
+                $("#score").fadeIn(100);
+
+                if ($("#easy").prop("checked") && $("#medium").prop("checked", false)) {
+                    $("#bord1").append("<table1></table1>");
+                    var table1 = $("#bord1").children();
+                    table1.append("<tr><td id='t1td1'></td><td id='t1td2'></td><td id='t1td3'></td></tr>");
+                    table1.append("<tr><td id='t1td4'></td><td id='t1td5'></td><td id='t1td6'></td></tr>");
+                    table1.append("<tr><td id='t1td7'></td><td id='t1td8'></td><td id='t1td9'></td></tr>");
+                    $("#bord1").fadeIn("slow");
+                    $("#bord2").empty();
+                    $("#bord3").empty();
+
+                } else { // BEGIN VAN DE GROTE ELSE
+
+
+                    if ($("#easy").prop("checked", false) && $("#medium").prop("checked")) {
+                        $("#bord2").append("<table2></table2>");
+                        var table2 = $("#bord2").children();
+                        table2.append("<tr><td id='t2td1'></td><td id='t2td2'></td><td id='t2td3'></td><td id='t2td4'></td></tr>");
+                        table2.append("<tr><td id='t2td5'></td><td id='t2td6'></td><td id='t2td7'></td><td id='t2td8'></td></tr>");
+                        table2.append("<tr><td id='t2td9'></td><td id='t2td10'></td><td id='t2td11'></td><td id='t2td12'></td></tr>");
+                        table2.append("<tr><td id='t2td13'></td><td id='t2td14'></td><td id='t2td15'></td><td id='t2td16'></td></tr>");
+                        $("#bord2").fadeIn("slow");
+                        $("#bord1").empty();
+                        $("#bord3").empty();
+
+
+                    } else {
+                        $("#new").prop("disabled", false);
+                        if ($("#hard").prop("checked") && $("#easy").prop("checked", false) && $("#medium").prop("checked", false)) {
+                            $("#bord3").append("<table3></table3>");
+                            var table3 = $("#bord3").children();
+                            table3.append("<tr><td id='t3td1'></td><td id='t3td2'></td><td id='t3td3'></td><td id='t3td4'></td><td id='t3td5'></td></tr>");
+                            table3.append("<tr><td id='t3td6'></td><td id='t3td7'></td><td id='t3td8'></td><td id='t3td9'></td><td id='t3td10'></td></tr>");
+                            table3.append("<tr><td id='t3td11'></td><td id='t3td12'></td><td id='t3td13'></td><td id='t3td14'></td><td id='t3td15'></td></tr>");
+                            table3.append("<tr><td id='t3td16'></td><td id='t3td17'></td><td id='t3td18'></td><td id='t3td19'></td><td id='t3td20'></td></tr>");
+                            table3.append("<tr><td id='t3td21'></td><td id='t3td22'></td><td id='t3td23'></td><td id='t3td24'></td><td id='t3td25'></td></tr>");
+                            $("#bord3").fadeIn("slow");
                             $("#bord2").empty();
-                            $("#bord3").empty();
-
-                        } else { // BEGIN VAN DE GROTE ELSE
+                            $("#bord1").empty();
 
 
-                            if ($("#easy").prop("checked", false) && $("#medium").prop("checked")) {
-                                $("#bord2").append("<table2></table2>");
-                                var table2 = $("#bord2").children();
-                                table2.append("<tr><td id='t2td1'></td><td id='t2td2'></td><td id='t2td3'></td><td id='t2td4'></td></tr>");
-                                table2.append("<tr><td id='t2td5'></td><td id='t2td6'></td><td id='t2td7'></td><td id='t2td8'></td></tr>");
-                                table2.append("<tr><td id='t2td9'></td><td id='t2td10'></td><td id='t2td11'></td><td id='t2td12'></td></tr>");
-                                table2.append("<tr><td id='t2td13'></td><td id='t2td14'></td><td id='t2td15'></td><td id='t2td16'></td></tr>");
-                                $("#bord2").fadeIn("slow");
-                                $("#bord1").empty();
-                                $("#bord3").empty();
+                        }
+                    }
 
+                } //EINDE GROTE ELSE
 
-                            } else {
-                                $("#new").prop("disabled", false);
-                                if ($("#hard").prop("checked") && $("#easy").prop("checked", false) && $("#medium").prop("checked", false)) {
-                                    $("#bord3").append("<table3></table3>");
-                                    var table3 = $("#bord3").children();
-                                    table3.append("<tr><td id='t3td1'></td><td id='t3td2'></td><td id='t3td3'></td><td id='t3td4'></td><td id='t3td5'></td></tr>");
-                                    table3.append("<tr><td id='t3td6'></td><td id='t3td7'></td><td id='t3td8'></td><td id='t3td9'></td><td id='t3td10'></td></tr>");
-                                    table3.append("<tr><td id='t3td11'></td><td id='t3td12'></td><td id='t3td13'></td><td id='t3td14'></td><td id='t3td15'></td></tr>");
-                                    table3.append("<tr><td id='t3td16'></td><td id='t3td17'></td><td id='t3td18'></td><td id='t3td19'></td><td id='t3td20'></td></tr>");
-                                    table3.append("<tr><td id='t3td21'></td><td id='t3td22'></td><td id='t3td23'></td><td id='t3td24'></td><td id='t3td25'></td></tr>");
-                                    $("#bord3").fadeIn("slow");
-                                    $("#bord2").empty();
-                                    $("#bord1").empty();
+                $("td").one("click", function () { //X of O op de tabelen
+                    if (move === 0) {
+                        $(this).text(x);
+                        move === 1;
+                        RandomMove1();
 
+                    }
 
+                });
+
+               // GEBRUIKER MOVE
+                function UserMove() { 
+                    if(table1.text()!== x && table1.text() !== o)
+                        {
+                            table1.text(x);
+                        }else if (table2.text()!== x && table2.text() !== o)
+                            {
+                                table2.text(x);
+                            }else if(table3.text()!== x && table3.text() !== o)
+                                {
+                                     table3.text(x);
                                 }
-                            }
-
-                        } //EINDE GROTE ELSE
-
-                        $("td").one("click", function () { //X of O op de tabelen
-                            if (move === 0) {
-                                $(this).text(x);
-                                move === 1;
-                                Cpu();
-                                
-
-                            }
-
-                        });
-
-
-                        function Cpu() {
-                            if ($("#t1td2").text() === x && $("#t1td3").text() === x && $("#t1td1").text() === "" || $("#t1td4").text() === x && $("#t1td7").text() === x && $("#t1td1").text() === "" || $("#t1td9").text() === x && $("#t1td5").text() === x && $("#t1td1").text() === "") {
-                                $("#t1td1").text(o);
-                                move === 0;
-
-                            } else if ($("#t1td1").text() === x && $("#t1td2").text() === x && $("#t1td3").text() === "" || $("#t1td9").text() === x && $("#t1td6").text() === x && $("#t1td3").text() === "" || $("#t1td5").text() === x && $("#t1td7").text() === x && $("#t1td3").text() === "") {
-                                $("#t1td3").text(o);
-                                move === 0;
-
-                            } else if ($("#t1td4").text() === x && $("#t1td5").text() === x && $("#t1td6").text() === "" || $("#t1td3").text() === x && $("#t1td9").text() === x && $("#t1td6").text() === "") {
-                                $("#t1td6").text(o);
-                                move === 0;
-                            } else if ($("#t1td5").text() === x && $("#t1td6").text() === x && $("#t1td4").text() === "" || $("#t1td1").text() === x && $("#t1td7").text() === x && $("#t1td4").text() === "") {
-                                $("#t1td4").text(o);
-                                move === 0;
-                            } else if ($("#t1td7").text() === x && $("#t1td8").text() === x && $("#t1td9").text() === "" || $("#t1td1").text() === x && $("#t1td5").text() === x && $("#t1td9").text() === "" || $("#t1td3").text() === x && $("#t1td6").text() === x && $("#t1td9").text() === "") {
-                                $("#t1td9").text(o);
-                                move === 0;
-                            } else if ($("#t1td8").text() === x && $("#t1td9").text() === x && $("#t1td7").text() === "" || $("#t1td1").text() === x && $("#t1td4").text() === x && $("#t1td7").text() === "" || $("#t1td3").text() === x && $("#t1td5").text() === x && $("#t1td7").text() === "") {
-                                $("#t1td7").text(o);
-                                move === 0;
-                            } else if ($("#t1td2").text() === x && $("#t1td5").text() === x && $("#t1td8").text() === "" || $("#t1td7").text() === x && $("#t1td9").text() === x && $("#t1td8").text() === "") {
-                                $("#t1td8").text(o);
-                                move === 0;
-                            } else if ($("#t1td8").text() === x && $("#t1td5").text() === x && $("#t1td2").text() === "" || $("#t1td1").text() === x && $("#t1td3").text() === x && $("#t1td2").text() === "") {
+               
+                }; 
+                
+                // CPU PLAYER MOVE
+                // TABEL 1
+                function RandomMove1() {
+                    if (random > 0.89) {
+                        if ($("#t1td1").text() !== x && $("#t1td1").text() !== o) {
+                            $("#t1td1").text(o);
+                            return $("#t1td1");
+                        } else if (random > 0.78) {
+                            if ($("#t1td2").text() !== x && $("#t1td2").text() !== o) {
                                 $("#t1td2").text(o);
-                                move === 0;
-                            } else if ($("#t1td4").text() === x && $("#t1td6").text() === x && $("#t1td5").text() === "" || $("#t1td2").text() === x && $("#t1td8").text() === x && $("#t1td5").text() === "") {
-                                $("#t1td5").text(o);
-                                move === 0;
-                            } else {
-                                if ($("#t1td5").text() === "") {
-                                    $("#t1td5").text() === o;
-                                    move === 0;
-                                } else {
-                                    if ($("#t1td1").text() === "") {
-                                        $('#t1td1').text(o);
-                                        move === 0;
-                                    } else {
-                                        if ($("#t1td9").text() === "") {
-                                            $('#t1td9').text(o);
-                                            move === 0;
-                                        } else {
-                                            if ($("#t1td8").text() === "") {
-                                                $('#t1td8').text(o);
-                                                move === 0;
-                                            } else {
-                                                if ($("#t1td4").text() === "") {
-                                                    $('#t1td4').text(o);
-                                                    move === 0;
+                                return $("#t1td2");
+                            } else if (random > 0.68) {
+                                if ($("#t1td3").text() !== x && $("#t1td3").text() !== o) {
+                                    $("#t1td3").text(o);
+                                    return $("#t1td3");
+                                } else if (random > 0.57) {
+                                    if ($("#t1td4").text() !== x && $("#t1td4").text() !== o) {
+                                        $("#t1td4").text(o);
+                                        return $("t1td4");
+                                    } else if (random > 0.48) {
+                                        if ($("#t1td5").text() !== x && $("#t1td5").text() !== o) {
+                                            $("#t1td5").text(o);
+                                            return $("#t1td5");
+                                        } else if (random > 0.38) {
+                                            if ($("#t1td6").text() !== x && $("#t1td6").text() !== o) {
+                                                $("#t1td6").text(o);
+                                                return $("#t1td6");
+                                            } else if (random > 0.26) {
+                                                if ($("#t1td7").text() !== x && $("#t1td7").text() !== o) {
+                                                    $("#t1td7").text(o);
+                                                    return $("#t1td7");
+                                                } else if (random > 0.15) {
+                                                    if ($("#t1td8").text() !== x && $("#t1td8").text() !== o) {
+                                                        $("#t1td8").text(o);
+                                                        return $("#t1td8");
+                                                    } else if (random > 0.08) {
+                                                        if ($("#t1td9").text() !== x && $("#t1td9").text() !== o) {
+                                                            $("#t1td9").text(o);
+                                                            return $("#t1td9");
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
                                     }
-
                                 }
                             }
-                        };// Cpu player Functie****
+                        }
+                    }
+                }
+                // TABEL 2
+                function RandomMove2() {
+                    if (random > 0.89) {
+                        if ($("#t1td1").text() !== x && $("#t1td1").text() !== o) {
+                            $("#t1td1").text(o);
+                            return $("#t1td1");
+                        } else if (random > 0.78) {
+                            if ($("#t1td2").text() !== x && $("#t1td2").text() !== o) {
+                                $("#t1td2").text(o);
+                                return $("#t1td2");
+                            } else if (random > 0.68) {
+                                if ($("#t1td3").text() !== x && $("#t1td3").text() !== o) {
+                                    $("#t1td3").text(o);
+                                    return $("#t1td3");
+                                } else if (random > 0.57) {
+                                    if ($("#t1td4").text() !== x && $("#t1td4").text() !== o) {
+                                        $("#t1td4").text(o);
+                                        return $("t1td4");
+                                    } else if (random > 0.48) {
+                                        if ($("#t1td5").text() !== x && $("#t1td5").text() !== o) {
+                                            $("#t1td5").text(o);
+                                            return $("#t1td5");
+                                        } else if (random > 0.38) {
+                                            if ($("#t1td6").text() !== x && $("#t1td6").text() !== o) {
+                                                $("#t1td6").text(o);
+                                                return $("#t1td6");
+                                            } else if (random > 0.26) {
+                                                if ($("#t1td7").text() !== x && $("#t1td7").text() !== o) {
+                                                    $("#t1td7").text(o);
+                                                    return $("#t1td7");
+                                                } else if (random > 0.15) {
+                                                    if ($("#t1td8").text() !== x && $("#t1td8").text() !== o) {
+                                                        $("#t1td8").text(o);
+                                                        return $("#t1td8");
+                                                    } else if (random > 0.08) {
+                                                        if ($("#t1td9").text() !== x && $("#t1td9").text() !== o) {
+                                                            $("#t1td9").text(o);
+                                                            return $("#t1td9");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //TABEL 3
+                function RandomMove3() {
+                    if (random > 0.89) {
+                        if ($("#t1td1").text() !== x && $("#t1td1").text() !== o) {
+                            $("#t1td1").text(o);
+                            return $("#t1td1");
+                        } else if (random > 0.78) {
+                            if ($("#t1td2").text() !== x && $("#t1td2").text() !== o) {
+                                $("#t1td2").text(o);
+                                return $("#t1td2");
+                            } else if (random > 0.68) {
+                                if ($("#t1td3").text() !== x && $("#t1td3").text() !== o) {
+                                    $("#t1td3").text(o);
+                                    return $("#t1td3");
+                                } else if (random > 0.57) {
+                                    if ($("#t1td4").text() !== x && $("#t1td4").text() !== o) {
+                                        $("#t1td4").text(o);
+                                        return $("t1td4");
+                                    } else if (random > 0.48) {
+                                        if ($("#t1td5").text() !== x && $("#t1td5").text() !== o) {
+                                            $("#t1td5").text(o);
+                                            return $("#t1td5");
+                                        } else if (random > 0.38) {
+                                            if ($("#t1td6").text() !== x && $("#t1td6").text() !== o) {
+                                                $("#t1td6").text(o);
+                                                return $("#t1td6");
+                                            } else if (random > 0.26) {
+                                                if ($("#t1td7").text() !== x && $("#t1td7").text() !== o) {
+                                                    $("#t1td7").text(o);
+                                                    return $("#t1td7");
+                                                } else if (random > 0.15) {
+                                                    if ($("#t1td8").text() !== x && $("#t1td8").text() !== o) {
+                                                        $("#t1td8").text(o);
+                                                        return $("#t1td8");
+                                                    } else if (random > 0.08) {
+                                                        if ($("#t1td9").text() !== x && $("#t1td9").text() !== o) {
+                                                            $("#t1td9").text(o);
+                                                            return $("#t1td9");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
 
-                        
 
 
 
@@ -164,20 +268,10 @@
 
 
 
-                                       
+            }); //StartGame functie***
 
 
-                            }); //StartGame functie***
-
-
-
-
-
-
-
-
-
-                    });
+        });
     </script>
 
 

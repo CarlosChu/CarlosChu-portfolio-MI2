@@ -137,6 +137,7 @@ $(document).ready(function () {
            
             }
         };
+         /*FUNCTIE WINS() wordt uitgevoerd wanneer X of O wint*/
    function Wins(){       
       function Win1()
             {
@@ -242,7 +243,8 @@ $(document).ready(function () {
          Win2();
          Win3();
     }; /*FUNCTIE WINS()*/
-  function ClearTable(){
+    
+  function ClearTable(){    /*werkt nog niet*/
       $("#again").click(function() { // tabelen maken
 
        

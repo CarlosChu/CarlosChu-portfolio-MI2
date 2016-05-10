@@ -8,48 +8,40 @@
     <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
     <link rel="icon" href="../0410.TicTacToeLogo_1E0ADB7E.png">
     <link rel="stylesheet" href="spelCSS.css">
-    <script src="../js/jquery-1.12.1.js" ></script>
+    <script src="../js/jquery-1.12.1.js"></script>
     <script src="spel.js" type="text/javascript"></script>
-    
+
 
     <title>TicTacToe</title>
 
 </head>
 
 <body>
-    
+
     <img src="../TicTacToeTitel.gif" alt="titel">
-    <div class="welkom">
-        <button id="buttonStart">START</button>
-    </div>
+    <div class="welkom"></div>
     <div class="container">
-        <div id="score">
-            <p>SCORE</p>
-            <p>X: <span id="xScore">0</span></p>
-            <p>O: <span id="oScore">0</span></p>
-        </div>
+
         <header>
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li>
-                            <button id="new">NEW GAME</button>
-                        </li>
-                        <li>
-                            <button id="again">PLAY AGAIN</button>
-                        </li>
-                        <form id="levels">
-                            <h4>DIFFICULTY</h4> EASY
-                            <input id="easy" type="radio" name="level" value="easy" checked>
-                            <br> MEDIUM
-                            <input id="medium" type="radio" name="level" value="medium">
-                            <br> HARD
-                            <input id="hard" type="radio" name="level" value="hard">
-                            <br>
-                        </form>
-                    </ul>
-                </nav>
-            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <button id="again">PLAY AGAIN</button>
+                    </li>
+                    
+                    <form id="levels">
+                        <h4>DIFFICULTY</h4> EASY
+                        <input id="easy" type="radio" name="level" value="easy">
+                        <br> MEDIUM
+                        <input id="medium" type="radio" name="level" value="medium">
+                        <br> HARD
+                        <input id="hard" type="radio" name="level" value="hard">
+                        <br>
+                    </form>
+                </ul>
+            </nav>
+
 
         </header>
         <div class="bordArea">
@@ -61,6 +53,10 @@
 
         </div>
     </div>
+    <p class="score">SCORE</p>
+    <p class="score">X: <span id="xScore"></span></p>
+    <p class="score">O: <span id="oScore"></span></p>
+
 
 
 </body>

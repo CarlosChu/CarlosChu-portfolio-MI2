@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+        <meta name="viewport" content="width=device-width, height=device-height" />
+		<script src="../js/jquery-1.12.1.js"></script>
+        <script type="text/javascript">
+         "use strict";
+         /*global $*/
+         $(document).ready(function () {
+             
+            $("#bxl").click(function () {
+            $("#bxl").css({"font-weight": "bold"}),
+            $("#bxl").click(function () {
+                $("#bxl").css({"font-weight": ""})
+            });
+            });
+            
+            $("#gent").click(function () {
+            $("#gent").css({"font-weight": "bold"}),
+                $("#gent").click(function () {
+                $("#gent").css({"font-weight": ""})
+            });
+            });
+            $("#hasselt").click(function () {
+            $("#hasselt").css({"font-weight": "bold"}),
+                $("#hasselt").click(function () {
+                $("#hasselt").css({"font-weight": ""})
+            });
+            });
+            $("#knokke").click(function () {
+            $("#knokke").css({"font-weight": "bold"}),
+                $("#knokke").click(function () {
+                $("#knokke").css({"font-weight": ""})
+            });
+            });     
+            $("#leuven").click(function () {
+            $("#leuven").css({"font-weight": "bold"}),
+                $("#leuven").click(function () {
+                $("#leuven").css({"font-weight": ""})
+            });
+            });
+            $("#btn").click(function () {
+                $("ul").append("<li id=" + $("#input").val() +">"+ $("#input").val() + "</li>");
+                
+            });
+         });
+       
+        </script>
+
+            
+           </head>
+
+	<body>
+        <form>
+    <input type="text" name="stad" id="input">
+    <input id="btn" type="button" value="ADD"> </form>
+    
+<ul>
+    <li id="bxl">Brussel</li>
+    <li id="gent">Gent</li>
+    <li id="hasselt">Hasselt</li>
+    <li id="knokke">Knokke</li>
+    <li id="leuven">Leuven</li>
+</ul>
+        
+        
+        
+           
+        
+        
+        
+    
+
+   
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="beschrijving van de webpagina">
+    <meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+
+    <script src="../js/jquery-1.12.1.js"></script>
+    <script type="text/javascript">
+        "use strict";
+        /*global $*/
+        $(document).ready(function(){
+            
+             var startTimer, posX, posY, bericht;
+        function resetTimer(){
+            startTimer = new Date().getDate();
+        };
+        function verwerkTouchstart(event){
+            resetTimer();
+            posX = event.originalEvent.touches[0].pageX;
+            posY = event.originalEvent.touches[0].pageY;
+            bericht = "TS:" + startTimer + " x:" + posX + " y:" + posY;
+            $("#txt1").text($("#txt1").text() + bericht + "\r\n");
+        };
+        function verwerkTouchend(event){
+            posX = event.originalEvent.changedTouches[0].pageX;
+            posY = event.originalEvent.changedTouches[0].pageY;
+            bericht = "TE:" + (new Date().getTime() - startTimer) + " x:" + posX + " y:" + posY;
+            $("#txt2").text($("#txt2").text() + bericht + "\r\n");
+        };
+        $("body").on("touchstart", verwerkTouchstart);
+        $("body").on("touchend", verwerkTouchend);
+        });
+       
+    </script>
+</head>
+
+<body>
+    
+       <p>Touchstart :</p> 
+        <br>
+        <textarea id="txt1" rows="20" cols="30"></textarea>
+  
+       <p>Touchend :</p> 
+        <br>
+        <textarea id="txt2" rows="20" cols="30"></textarea>
+    
+
+</body>
+
+</html>

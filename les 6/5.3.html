@@ -10,16 +10,21 @@
         <script type="text/javascript">
         "use strict"
         /*global $*/
-        
-          $(document).ready(function(){
+        $(document).ready(function(){
             $("#pic").hide();
+              $("#pic2").hide();
              $("#pic").fadeIn(1000);
-              $('#pic').click(function () {
-                  $("#pic").fadeIn();
-                $(this).attr("src", "http://img.mobypicture.com/ac9221b42e4852370dde2768686b999e_large.jpg");
+              
+            $('#pic').click(function ()
+            {
+                $("#pic").hide();
+                $("#pic2").fadeIn();
+               
+                    
             });
 
-            });
+         });
+          
             
 
 
@@ -41,8 +46,8 @@
 	</head>
 
 	<body>
-       <div style="text-align:center"><img id="pic" src="http://img.mobypicture.com/4784e2f8d760413b945c4e135be20278_large.jpg"></div>
-
+<div style="text-align:center"><img id="pic" src="http://img.mobypicture.com/4784e2f8d760413b945c4e135be20278_large.jpg">
+<img id="pic2" src="http://img.mobypicture.com/ac9221b42e4852370dde2768686b999e_large.jpg"></div>
         
         
         

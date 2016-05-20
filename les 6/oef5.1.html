@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="beschrijving van de webpagina">
+    <meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>Titel van de webpagina</title>
+    <script src="../js/jquery-1.12.1.js"></script>
+    <script type="text/javascript">
+        "use strict"
+        /*global $ */
+        $(document).ready(function () {
+            $("#kleiner").click(function () {
+                //ParseFloat zet text naar int
+                var grotte = parseFloat($("p").css("font-size"));
+                $("p").css("font-size", ((.8 * grotte) > 3 ? (.8 * grotte) : 3) + "px");
+            });
+            $("#groter").click(function () {
+                var grotte = parseFloat($("p").css("font-size"));
+                $("p").css("font-size", (1.2 * grotte) + "px");
+            });
+
+        });
+    </script>
+
+
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <h1>jQuery - de Basis - oef5.1</h1> Tekst
+        <button id="kleiner">Kleiner</button>
+        <button id="groter">Groter</button>
+    </header>
+
+    <div>
+        <p>carlos chu zhang</p>
+    </div>
+
+
+</body>
+</html>

@@ -10,38 +10,87 @@
         <script type="text/javascript">
         "use strict"
         /*global $*/
-        $(document).ready(function(){
+            var fotoArray=
+            [
+              "41fef69d2839b6b9122232c75d568a9e.jpg", 
+        "ee0e0e7b8e70210a2c808c45b7033086.jpg", 
+        "735893d6e1142038e671ceee2fe6732a.jpg", 
+        "443a61a7feef88aa68a64d7558070fcd.jpg",
+        "Perfect-Moment-Inspiration-Picture-Quotes.jpg"
+            ];
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        })       
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        $(document).ready(function () {
+        var i, foto, bron, thumb;
+		$("#galerij").html("<div id='frame'><img /><\/div>" +
+					"<ul class='fotolijst'><\/ul>");
+		
+		
+		$("#frame img").attr("src", fotoArray[0]);
+		
+
+		for (i = 0; i < fotoArray.length; i += 1) {
+			foto = fotoArray[i];
+			bron = foto;
+			thumb = bron.replace("_large.jpg", "_square.jpg");
+			$(".fotolijst").append("<li><a href='#' data-rel='" + i + "'><img src='" + thumb + "'><\/a><\/li>");
+
+		}
+		
+		function soFadeImg() {
+			var index = parseInt($(this).attr("data-rel"), 10),
+                bron = fotoArray[index];
+			$("#frame").css("background-image");
+			$("#frame").html("<img style='display:none;'>");
+			$("#frame img").attr("src", bron);
+			$("#frame img").fadeIn("slow");
+		}
+		
+		$(".fotolijst a").on("click", soFadeImg);
+
+		$(".fotolijst a").on("mouseenter", soFadeImg);
+					
+	});
+	
         
         </script>
+        <style>
+            ul.fotolijst{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            ul.fotolijst li{
+                float: left;
+                width: 100px;
+                
+            }
+            ul.fotolijst li img {
+                border: none;
             
+            }
+            #galerij{
+                text-align: center;
+                
+            }
+            #frame{
+                width: 512px;
+                height: 342px;
+                margin: 10px 0px 10px 0px;   
+                border: 3px solid #ccc;
+                overflow: hidden;
+            }
+        
+        
+        
+        
+        
+        </style>
         
 	</head>
-
+<header><h1>jQuery - de basis - Fotogalerij</h1></header>
 	<body>
-        
+        <div id="galerij"></div>
         
         
         

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+        <meta name="viewport" content="width=device-width, height=device-height" />
+    
+    <title>Stel weeralert in</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1> Stel weeralert in </h1>
+        </div>
+        <div data-role="content">
+            <div data-role="content">
+                <form action="#" method="get">
+                    <div data-role="fieldcontain">
+                        <label for="email"> E-mail adres: </label>
+                        <input type="text" name="email" id="email" value="" />
+                    </div>
+                    <div data-role="controlgroup">
+                        <legend>Voor welk weer?</legend>
+                        <input type="checkbox" name="regen" id="regen" class="custom" />
+                        <label for="regen"> Regen</label>
+                        <input type="checkbox" name="sneeuw" id="sneeuw" class="custom" />
+                        <label for="sneeuw"> sneeuw</label>
+                        <input type="checkbox" name="zon" id="zon" class="custom" />
+                        <label for="zon"> zon</label>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="minuten"> Aantal minuten vooraf:</label>
+                        <input type="range" name="minuten" id="minuten" valu="1" min="1" max="60" />
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="actief"> Actief: </label>
+                        <select name="actief" id="actief" data-role="slider">
+                            <option value="off">Nee</option>
+                            <option value="on">Ja</option>
+                        </select>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="adres"> Voor welk adres: </label>
+                        <select name="store" id="store">
+                            <option value="thuis">Thuis</option>
+                            <option value="werk">Werk</option>
+                            <option value="vakantie">vakantie</option>
+                        </select>
+                    </div>
+                    <div class="ui-body ui-body-b">
+                        <fieldset class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <button type="submit" data-theme="d">Annuleer</button>
+                            </div>
+                            <div class="ui-block-b">
+                                <button type="submit" data-theme="a">
+                                    Bewaar
+                                </button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

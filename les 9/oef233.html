@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+        <meta name="viewport" content="width=device-width, height=device-height" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<head>
+   <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script >
+			$(document).ready(function() {					
+					var URL = "http://api.flickr.com/services/feeds" + "/photos_public.gne?format=json&tag=";
+					$.ajax({
+							dataType : 'json',
+							type : 'GET',
+							url : URL + '&jsoncallback=?',
+							success : verwerkJSON
+					});
+					
+				});
+			
+			function verwerkJSON(response) {
+				
+				for (var i = 0; i < response.items.length; i++) {
+					var twitobj = response.items[i];
+					var html =  twitobj ;
+					$("#status").append(html);
+				}
+				$('#statius').listview("refresh");
+			}
+		</script>
+</head>
+
+<body>
+  <div data-role="page">
+    <div data-role="header">
+    	<h1>
+    		Flickr Status Updates</h1>
+    	
+    </div>
+    <div data-role="content">
+    	<ul id="status"></ul>
+    </div>
+    <div data-role="footer">
+    	<h4>
+    		Laatst bijgewerkt op <span id="updateTijd">&nbsp;</span></h4>
+    </div>
+  </div>
+</body>
+</html>

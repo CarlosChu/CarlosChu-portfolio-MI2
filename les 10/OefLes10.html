@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="beschrijving van de webpagina" >
+		<meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+        <meta name="viewport" content="width=device-width, height=device-height" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<title>Titel van de webpagina</title>
+        <script type="text/javascript">
+            "use strict";
+            /*global $ */
+          
+            
+       $(document).ready(function () {
+
+			$("#foto").click(function () {
+				$(this).attr("src","86-512.png");
+			});
+			$("#ja").click(function () {
+				$('#foto').attr("src", "Door-512.png");
+			});
+           $("#j").click(function () {
+				$("#foto").attr("src", "Door-512.png");
+			});
+           
+           $("button").click(function(){
+            $("div").load("http://www.ophalvens.net/mi2/les10/automerken.php?m=all");
+            
+        });
+    });
+  
+        </script>
+            
+        
+	</head>
+
+	<body>
+
+<!--HOME-->
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<div data-role="navbar" data-position="fixed" data-type="horizontal">
+				<a href="#home" data-transition="pop" data-role="button" data-icon="home" data-inline="true" data-mini="true" data-iconpos="bottom" class="ui-disabled">Home</a>
+				<a href="#pagina2" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina2</a>
+				<a href="#pagina3" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina3</a>
+                <a href="#pagina4" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina4</a>
+			</div>
+		</div>
+		<div data-role="content">
+
+			<h1>HALLO!</h1>
+			<p>
+                Ik ben Carlos Chu.
+				<br> Ik ben 23 jaar oud.
+			</p>
+			<img id="profiel" src="12072534_10206509182061734_7920636146097676546_n.jpg" width="200px">
+			
+		</div>
+
+	</div>
+<!--FOTO (OPEN/DICHT)-->
+	<div data-role="page" id="pagina2">
+		<div data-role="header" data-theme="b">
+			<div data-role="navbar" data-position="fixed" data-type="horizontal">
+				<a href="#home" data-transition="pop" data-role="button" data-icon="home" data-inline="true" data-mini="true" data-iconpos="bottom" >Home</a>
+				<a href="#pagina2" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom" class="ui-disabled">Pagina2</a>
+				<a href="#pagina3" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina3</a>
+                <a href="#pagina4" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina4</a>
+			</div>
+		</div>
+		<div data-role="content">
+		
+			<img id="foto" src="Door-512.png" width="200px">            
+
+		</div>
+
+	</div>
+
+	<!----------------------- Pagina 3 ------------------------->
+
+	<div data-role="page" id="pagina3">
+		<div data-role="header" data-theme="b">
+			<div data-role="navbar" data-position="fixed" data-type="horizontal">
+				<a href="#home" data-transition="pop" data-role="button" data-icon="home" data-inline="true" data-mini="true" data-iconpos="bottom">Home</a>
+				<a href="#pagina2" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina2</a>
+				<a href="#pagina3" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom" class="ui-disabled">Pagina3</a>
+                <a href="#pagina4" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina4</a>
+			</div>
+		</div>
+		<div data-role="content">
+			<h1>Wil je het slot terug sluiten?</h1>
+			<form>
+				<div data-role="content">
+                        <a href="#ja" data-rel="back" id="ja" class="ui-btn">Ja</a>
+					    <a href="#nee" data-rel="popup" class="ui-btn">Nee</a>
+                    <div data-role="popup" id="nee" class="ui-content">
+                        <p>Wilt u zeker dat je niet wil sluiten?</p>
+                        <a href="#j" data-rel="back" id="j" class="ui-btn">Ja</a>
+					    <a href="#n" data-rel="popup" id="n" class="ui-btn">Nee</a>
+                     <div data-role="popup" id="vraag" class="ui-content">
+                        <p>Waar woont je?</p>
+                       
+                     
+                  </div>
+                  </div>
+                </div>
+
+			</form>
+		</div>
+	</div>
+	<!----------------------- Pagina4------------------------->
+
+
+	<div data-role="page" id="pagina4">
+		<div data-role="header" data-theme="b">
+			<div data-role="navbar" data-position="fixed" data-type="horizontal">
+				<a href="#home" data-transition="pop" data-role="button" data-icon="home" data-inline="true" data-mini="true" data-iconpos="bottom">Home</a>
+				<a href="#pagina2" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom">Pagina2</a>
+				<a href="#pagina3" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom" >Pagina3</a>
+                <a href="#pagina4" data-transition="pop" data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="bottom" class="ui-disabled">Pagina4</a>
+			</div>
+		</div>
+		<div data-role="content">
+            <h3>Automerken</h3>
+            <div></div>
+            <button>Click me</button>
+            
+        
+		</div>
+
+	</div>
+
+        
+        
+        
+           
+        
+        
+        
+    
+
+   
+	</body>
+</html>
